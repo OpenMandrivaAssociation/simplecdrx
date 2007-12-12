@@ -1,6 +1,6 @@
 %define name 	simplecdrx
 %define version	1.3.2
-%define release	3mdk
+%define release	%mkrel 3
 
 Summary: 	A powerful CD creation and audio maniplation program
 Name: 		%{name}
