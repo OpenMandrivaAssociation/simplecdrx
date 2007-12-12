@@ -16,7 +16,7 @@ Patch0:		simplecdrx-1.3.2-compile.patch.bz2
 Url: 		http://ogre.rocky-road.net/cdr.shtml
 BuildRoot: 	%{_tmppath}/%{name}-root
 BuildRequires:	gtk-devel
-BuildRequires:  XFree86-devel
+BuildRequires:  X11-devel
 BuildRequires:  libvorbis-devel
 
 %description
