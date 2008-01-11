@@ -43,15 +43,15 @@ quick reference.
 %makeinstall
 
 # Mandrake Menu entry
-mkdir -p $RPM_BUILD_ROOT%{_menudir}
-cat <<EOF > $RPM_BUILD_ROOT%{_menudir}/%{name}
-?package(%{name}): \
-needs="x11" \
-section="Applications/Archiving/CD Burning" \
-title="SimpleCDR-X" \
-longtitle="SimpleCDR-X" \
-command="%{_bindir}/simplecdrx" \
-icon="%{name}.png"
+mkdir -p $RPM_BUILD_ROOT%{_datadir}/applications/
+cat << EOF > %buildroot%{_datadir}/applications/mandriva-%{name}.desktop
+[Desktop Entry]
+Type=Application
+Categories=AudioVideo;DiscBurning;
+Name=SimpleCDR-X
+Comment=SimpleCDR-X
+Exec=%{_bindir}/simplecdrx
+Icon=%{name}
 EOF
 
 mkdir -p $RPM_BUILD_ROOT%{_miconsdir} $RPM_BUILD_ROOT%{_liconsdir} $RPM_BUILD_ROOT%{_iconsdir}
@@ -78,7 +78,7 @@ rm -rf $RPM_BUILD_DIR/%{name}-%{version}
 %{_iconsdir}/%{name}.*
 %{_miconsdir}/%{name}.*
 %{_liconsdir}/%{name}.*
-%{_menudir}/*
+%{_datadir}/applications/mandriva-*.desktop
 %_datadir/GETTEXT/pixmaps/*
 #%{_datadir}/SimpleCDR-X/pixmaps/*
 
