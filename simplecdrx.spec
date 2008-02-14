@@ -8,6 +8,7 @@ Version: 	%{version}
 Release: 	%{release}
 License: 	GPL
 Group: 		Archiving/Cd burning
+BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 Source0: 	%{name}-%{version}.tar.bz2
 Source1:   	%{name}-16x16.png.bz2
 Source2:   	%{name}-32x32.png.bz2
