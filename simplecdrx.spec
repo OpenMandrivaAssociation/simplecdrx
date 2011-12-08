@@ -73,7 +73,7 @@ bzcat %{SOURCE3} > $RPM_BUILD_ROOT%{_liconsdir}/%{name}.png
 %clean
  [ -n "${RPM_BUILD_ROOT}" -a "${RPM_BUILD_ROOT}" != / ] \
  && rm -rf ${RPM_BUILD_ROOT}/
-rm -rf $RPM_BUILD_DIR/%{name}-%{version}
+rm -rf %{_builddir}/%{name}-%{version}
 
 %files 
 %defattr(-,root,root)
