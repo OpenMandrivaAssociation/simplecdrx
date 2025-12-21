@@ -15,6 +15,11 @@ Source2:   	%{name}-32x32.png.bz2
 Source3:   	%{name}-48x48.png.bz2
 Patch0:		simplecdrx-1.3.2-compile.patch.bz2
 Url: 		https://ogre.rocky-road.net/cdr.shtml
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	libtool-base
+BuildRequires:	slibtool
+BuildRequires:	make
 BuildRequires:	gtk-devel
 BuildRequires:  X11-devel
 BuildRequires:  libvorbis-devel
